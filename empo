@@ -1,0 +1,23 @@
+struct employee
+{
+    int eno,age;
+    char ena[30],desig[30];
+    float sal;
+    
+};
+void swap(struct employee *p,struct employee *q)
+{
+    struct employee t;
+    t=*p;
+    *p=*q;
+    * q=t;
+    
+}
+void main()
+{
+    struct employee e1={11,27,"vasu","marketing manager",16000};
+    struct employee e2={12,26,"vamsi","deputy manager",14000};
+    swap(&e1,&e2);
+    printf("%d,%d,%s,%s,%f\n",e1.eno,e1.age,e1.ena,e1.desig,e1.sal);
+    printf("%d,%d,%s,%s,%f\n",e2.eno,e2.age,e2.ena,e2.desig,e2.sal);
+}
